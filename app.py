@@ -17,46 +17,61 @@ st.set_page_config(
     layout="centered"
 )
 
-# ปรับแต่ง UI เพิ่มเติมด้วย CSS โทนเขียว-ขาว
+# ปรับแต่ง UI เพิ่มเติมด้วย CSS พื้นหลังเขียว การ์ด/กล่องเป็นสีขาวให้อ่านง่าย
 st.markdown("""
 <style>
     .stApp {
-        background-color: #FFFFFF;
+        background-color: #2E7D32;
     }
-    h1, h2, h3 {
-        color: #1B5E20;
+    h1, h2, h3, p, span, label {
+        color: #FFFFFF !important;
     }
     div[data-testid="stMetric"] {
-        background-color: #E8F5E9;
-        border: 1px solid #A5D6A7;
+        background-color: #FFFFFF;
         border-radius: 12px;
         padding: 12px 8px;
         text-align: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     div[data-testid="stMetricLabel"] {
-        color: #2E7D32;
+        color: #1B5E20 !important;
+    }
+    div[data-testid="stMetricValue"] {
+        color: #2E7D32 !important;
     }
     .stButton > button {
-        background-color: #2E7D32;
-        color: #FFFFFF;
+        background-color: #FFFFFF;
+        color: #1B5E20 !important;
         border-radius: 8px;
-        border: none;
+        border: 2px solid #FFFFFF;
         font-weight: 600;
     }
     .stButton > button:hover {
-        background-color: #1B5E20;
-        color: #FFFFFF;
+        background-color: #E8F5E9;
+        color: #1B5E20 !important;
+        border: 2px solid #E8F5E9;
     }
     div[data-testid="stExpander"] {
-        border: 1px solid #A5D6A7;
         border-radius: 10px;
-        background-color: #F1F8F2;
+        background-color: #FFFFFF;
+    }
+    div[data-testid="stExpander"] p, div[data-testid="stExpander"] label {
+        color: #1B5E20 !important;
     }
     section[data-testid="stSidebar"] {
-        background-color: #E8F5E9;
+        background-color: #FFFFFF;
+    }
+    section[data-testid="stSidebar"] h1, section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3, section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] label {
+        color: #1B5E20 !important;
     }
     div[data-testid="stAlert"] {
         border-radius: 10px;
+        background-color: #FFFFFF;
+    }
+    div[data-testid="stAlert"] p {
+        color: #1B5E20 !important;
     }
 </style>
 """, unsafe_allow_html=True)
