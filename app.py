@@ -17,6 +17,50 @@ st.set_page_config(
     layout="centered"
 )
 
+# ปรับแต่ง UI เพิ่มเติมด้วย CSS โทนเขียว-ขาว
+st.markdown("""
+<style>
+    .stApp {
+        background-color: #FFFFFF;
+    }
+    h1, h2, h3 {
+        color: #1B5E20;
+    }
+    div[data-testid="stMetric"] {
+        background-color: #E8F5E9;
+        border: 1px solid #A5D6A7;
+        border-radius: 12px;
+        padding: 12px 8px;
+        text-align: center;
+    }
+    div[data-testid="stMetricLabel"] {
+        color: #2E7D32;
+    }
+    .stButton > button {
+        background-color: #2E7D32;
+        color: #FFFFFF;
+        border-radius: 8px;
+        border: none;
+        font-weight: 600;
+    }
+    .stButton > button:hover {
+        background-color: #1B5E20;
+        color: #FFFFFF;
+    }
+    div[data-testid="stExpander"] {
+        border: 1px solid #A5D6A7;
+        border-radius: 10px;
+        background-color: #F1F8F2;
+    }
+    section[data-testid="stSidebar"] {
+        background-color: #E8F5E9;
+    }
+    div[data-testid="stAlert"] {
+        border-radius: 10px;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 REMINDERS_FILE = Path("watering_reminders.json")
 
 # -----------------------------------------------------------------------------
