@@ -17,14 +17,14 @@ st.set_page_config(
     layout="centered"
 )
 
-# ปรับแต่ง UI เพิ่มเติมด้วย CSS พื้นหลังเขียว การ์ด/กล่องเป็นสีขาวให้อ่านง่าย
+# ปรับแต่ง UI เพิ่มเติมด้วย CSS พื้นหลังเขียวอ่อน ตัวหนังสือสีดำ อ่านง่าย
 st.markdown("""
 <style>
     .stApp {
-        background-color: #2E7D32;
+        background-color: #A5D6A7;
     }
     h1, h2, h3, p, span, label {
-        color: #FFFFFF !important;
+        color: #1B1B1B !important;
     }
     div[data-testid="stMetric"] {
         background-color: #FFFFFF;
@@ -32,31 +32,38 @@ st.markdown("""
         padding: 12px 8px;
         text-align: center;
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        overflow: visible;
     }
     div[data-testid="stMetricLabel"] {
-        color: #1B5E20 !important;
-    }
-    div[data-testid="stMetricValue"] {
         color: #2E7D32 !important;
     }
+    div[data-testid="stMetricValue"] {
+        color: #1B1B1B !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+        word-break: break-word;
+    }
     .stButton > button {
-        background-color: #FFFFFF;
-        color: #1B5E20 !important;
+        background-color: #2E7D32;
+        color: #FFFFFF !important;
         border-radius: 8px;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #2E7D32;
         font-weight: 600;
     }
     .stButton > button:hover {
-        background-color: #E8F5E9;
-        color: #1B5E20 !important;
-        border: 2px solid #E8F5E9;
+        background-color: #1B5E20;
+        color: #FFFFFF !important;
+        border: 2px solid #1B5E20;
     }
     div[data-testid="stExpander"] {
         border-radius: 10px;
         background-color: #FFFFFF;
     }
     div[data-testid="stExpander"] p, div[data-testid="stExpander"] label {
-        color: #1B5E20 !important;
+        color: #1B1B1B !important;
     }
     section[data-testid="stSidebar"] {
         background-color: #FFFFFF;
@@ -64,14 +71,14 @@ st.markdown("""
     section[data-testid="stSidebar"] h1, section[data-testid="stSidebar"] h2,
     section[data-testid="stSidebar"] h3, section[data-testid="stSidebar"] p,
     section[data-testid="stSidebar"] label {
-        color: #1B5E20 !important;
+        color: #1B1B1B !important;
     }
     div[data-testid="stAlert"] {
         border-radius: 10px;
         background-color: #FFFFFF;
     }
     div[data-testid="stAlert"] p {
-        color: #1B5E20 !important;
+        color: #1B1B1B !important;
     }
 </style>
 """, unsafe_allow_html=True)
